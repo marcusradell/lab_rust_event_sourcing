@@ -17,7 +17,7 @@ pub fn fold(e: Event) -> State {
 mod tests {
     use super::*;
     #[test]
-    fn fold_succeeded() {
+    fn fold_ok() {
         let expected = State {
             id: "1".into(),
             name: "Doggie".into(),
@@ -25,7 +25,7 @@ mod tests {
 
         let result = fold(Event {
             id: "1".into(),
-            name: "Doggies".into(),
+            name: "Doggie".into(),
         });
 
         assert_eq!(result, expected);
